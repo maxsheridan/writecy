@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+        <meta name="color-scheme" content="light only">
+        <link rel="preload" as="style" href="/styles/contact.css">
+        <link rel="preload" as="font" href="/assets/type/Manifold_Sans_Light_Italic.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" as="font" href="/assets/type/Plastic_Script_Light.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" as="image" href="/assets/graphics/old_school_hover.svg"> 
+        <title>Contact - Write CY</title>
+        <link rel="stylesheet" href="/styles/contact.css">
+        <script src="/js/linkstyling.js" defer></script>
+        <script src="/js/contact_form.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="/assets/graphics/writecy_logo.png">
+        <link rel="canonical" href="https://writecy.com/contact>
+        <meta name="description" content="Say hello.">
+        <meta name="thumbnail" content="">
+        <meta property="og:site_name" content="Write CY">
+        <meta property="og:title" content="Write CY">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://writecy.com">
+        <meta property="og:image" content="">
+        <meta property="og:image:type" content="image/webp">
+        <meta property="og:image:width" content="720">
+        <meta property="og:image:height" content="720">
+    </head>
+    <body>
+        <main>
+            <div id="contact" class="page">
+                <div class="header nav">
+                    <nav class="title">
+                        <p>
+                            <a href="/">Write CY</a>
+                        </p>
+                    </nav>
+                    <nav class="links">
+                        <p>
+                            <a href="/">News</a>
+                            <a href="/info">Info</a>
+                            <a href="/contact" class="active">Contact</a>
+                        </p>
+                    </nav>
+                </div>
+                <div class="content">
+                    <form id="contactForm" name="contactForm" target="hidden_iframe" onsubmit="submitted=true;" action=   "https://docs.google.com/forms/d/e/1FAIpQLScWEb9VvSM2An3zyAJddT-HNcnUm-zYeoqSW6ypCesbm3BapA/formResponse?">
+                        <h1 id="hello">Hello</h1><br>
+                        <label for="entry.245058957">Name</label><br>
+                        <input type="text" name="entry.245058957" id="entry.245058957" ><br>
+                        <label for="entry.2118440755">Email</label><br>
+                        <input type="text" name="entry.2118440755" id="entry.2118440755"><br>
+                        <label for="entry.708594186">Message</label><br>
+                        <textarea name="entry.708594186" id="entry.708594186" placeholder="I’ve spotted some errors on your website."></textarea><br><br>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted){}"></iframe>
+                <div class="footer nav">
+                    <div class="title">
+                        <p>Community Creative Writing</p>                   
+                    </div>
+                    <div class="copyright">
+                        <p>©WCY24
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main> 
+    </body>
+</html>

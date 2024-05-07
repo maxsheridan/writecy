@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Manifold Sans';
+    src: url('/assets/type/Manifold_Sans_Light_Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Plastic Script Light';
+    src: url('/assets/type/Plastic_Script_Light.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+html {
+    font-size: 16px;
+        cursor: url('/assets/graphics/old_school_point.svg'), auto;
+}
+    
+html a:hover {
+        cursor: url('/assets/graphics/old_school_hover.svg'), auto;
+}
+
+body { 
+    height: 100vh; 
+    height: 100dvh;
+    margin: 0;
+    background: whitesmoke;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+} 
+
+main {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Define the keyframes for the fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+p {
+    font-family: 'Manifold Sans', sans-serif, Helvetica, Arial, system-ui;
+    font-size: clamp(1rem,3vw,1.125rem);
+    font-weight: 400;
+    font-style: normal;
+    color: #111;
+    line-height: 2;
+}
+
+h1 {
+    font-family: 'Plastic Script Light', sans-serif, Helvetica, Arial, system-ui;
+    font-size: clamp(2.75rem,6vw,3.75rem); 
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.2;
+    word-spacing: -1rem;
+    color: #A60837;
+    margin: 1rem 0;
+}
+
+a {
+    color: #111;
+    text-decoration: underline;
+}
+
+main {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    height: 100vh;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 1.5rem 1rem;
+    }
+} 
+
+a {
+    color: #A60837;
+    text-decoration: none;
+}

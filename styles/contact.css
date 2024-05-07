@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'Manifold Sans';
+    src: url('/assets/type/Manifold_Sans_Light_Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Plastic Script Light';
+    src: url('/assets/type/Plastic_Script_Light.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+html {
+    font-size: 16px;
+    cursor: url('/assets/graphics/old_school_point.svg'), auto;
+    scroll-behavior: smooth;
+}
+
+html a:hover, button:hover {
+    cursor: url('/assets/graphics/old_school_hover.svg'), auto;
+}
+
+body { 
+    height: 100vh; 
+    height: 100dvh;
+    margin: 0;
+    background-color: whitesmoke;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+} 
+
+p {
+    font-family: 'Manifold Sans', sans-serif, Helvetica, Arial, system-ui;
+    font-size: clamp(1rem,3vw,1.156rem);
+    font-weight: 400;
+    font-style: normal;
+    color: #111;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Plastic Script Light', sans-serif, Helvetica, Arial, system-ui;
+    font-size: clamp(1.45rem,4vw,1.7rem);
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: -2px;
+    color: #111;
+    line-height: 1.2;
+    margin: 3rem 0 1.5rem 0;
+}
+
+main {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    display: flex; 
+    flex-direction: row;
+    width: 100%; 
+    height: 4rem;  
+    padding: 0; 
+    border-bottom: 3px solid #111;
+    background-color: whitesmoke;
+}
+
+nav.title {
+    position: relative;
+    flex: .4; 
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+nav.links {
+    position: relative; 
+    display: flex; 
+    flex: .6;
+    justify-content: flex-end; 
+    align-items: center; ;
+}
+
+.nav p:first-child {
+    padding-left: clamp(1rem,3vw,2rem);
+}
+
+.nav p:last-child {
+    padding-right: clamp(1rem,3vw,2rem);
+}
+
+nav a:nth-child(n+2) {
+    padding-left: .5rem;
+}
+
+nav a {
+    color: #111;
+}
+
+nav.links a.active {
+    color: #A60837;
+}
+
+nav.title a:hover,
+nav.links a:hover {
+    color: #A60837;
+}
+
+
+nav a {
+    text-decoration: none;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+form {
+    width: 100%;
+    max-width: 32rem;
+    padding-left: clamp(1rem,3vw,2rem);
+    padding-right: clamp(1rem,3vw,2rem);
+}
+
+#hello {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+label {
+    font-family: 'Manifold Sans', sans-serif, Helvetica, system-ui;
+    color: #111;
+    
+}
+
+input, textarea {
+    font-family: 'Manifold Sans', sans-serif, Helvetica, system-ui;
+    font-size: 1rem;
+    background-color: white;
+    width: 100%;
+    border: none;
+    border-radius: .15rem .15rem .15rem .15rem;
+    margin: .5rem 0 2rem;
+    padding: 1rem .5rem 1rem .5rem;
+}
+
+button {
+    font-family: 'Manifold Sans', sans-serif, Helvetica, system-ui;
+    font-size: 1.1rem;
+    color: #A60837;
+    background: whitesmoke;
+    border: 2px solid #A60837;
+    border-radius: .15rem .15rem .15rem .15rem;    
+    padding: .5rem 1.5rem;
+}
+
+button:hover {
+    color: #006BA6;
+    border: 2px solid #006BA6;
+}
+
+::placeholder {
+    color: #111;
+    opacity: .4;
+    text-decoration: line-through;
+}
+
+/*Thanks message*/
+
+form p {
+    font-family: 'Manifold Sans', sans-serif, Helvetica, system-ui;
+    font-size: clamp(1rem,3vw,1.156rem);
+    color: #111;
+    text-align: center;
+}
+
+.footer {
+    position: fixed; 
+    left: 0; 
+    bottom: 0; 
+    display: flex; 
+    flex-direction: row;
+    width: 100%; 
+    height: 4rem;  
+    border-top: 3px solid #111;
+    background-color: whitesmoke;
+}
+
+.footer {
+    .title {
+    position: relative; 
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 70%; 
+    }
+
+    .copyright {
+    position: relative; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    width: 30%;
+    }
+}
+
+/*Mobile*/
+
+@media (max-width: 768px) {
+    .page {
+        display: block;
+        height: 100%;
+    }
+
+    header {
+        position: fixed;
+        display: flex;
+        top: 0;
+        width: 100%;
+        height: 4rem;
+        padding: 3.5rem 0;
+    }
+}
