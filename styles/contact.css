@@ -44,7 +44,7 @@ body {
 
 p {
     font-family: 'Manifold Sans', sans-serif, Helvetica, Arial, system-ui;
-    font-size: clamp(1rem,3vw,1.156rem);
+    font-size: clamp(1rem,3vw,1.125rem);
     font-weight: 400;
     font-style: normal;
     color: #111;
@@ -104,12 +104,9 @@ nav.title {
 }
 
 nav.title a:nth-child(2) {
-    margin-left: -.25rem;
+    margin-left: .25rem;
 }
 
-nav.title a:nth-child(3) {
-    margin-left: -.75rem;
-}
 
 svg.socials {
     width: clamp(1.1rem,3vw,1.25rem);
@@ -125,16 +122,16 @@ nav.links {
     align-items: center;
 }
 
+nav.links a:nth-child(n+2) {
+    padding-left: .5rem;
+}
+
 .nav p:first-child {
     padding-left: clamp(1rem,3vw,2rem);
 }
 
 .nav p:last-child {
     padding-right: clamp(1rem,3vw,2rem);
-}
-
-nav a:nth-child(n+2) {
-    padding-left: .5rem;
 }
 
 nav a {
@@ -151,6 +148,7 @@ nav.links a:hover {
 .socials:hover {
     fill: #A60837;
 }
+
 .content {
     flex: 1;
     display: flex;
@@ -175,13 +173,14 @@ form {
 
 label {
     font-family: 'Manifold Sans', sans-serif, Helvetica, system-ui;
+    font-size: clamp(1rem,3vw,1.125rem);
     color: #111;
     
 }
 
 input, textarea {
     font-family: 'Manifold Sans', sans-serif, Helvetica, system-ui;
-    font-size: 1rem;
+    font-size: clamp(1rem,3vw,1.125rem);
     background-color: white;
     width: 100%;
     border: none;
@@ -192,7 +191,7 @@ input, textarea {
 
 button {
     font-family: 'Manifold Sans', sans-serif, Helvetica, system-ui;
-    font-size: 1.1rem;
+    font-size: clamp(1rem,3vw,1.125rem);
     color: #A60837;
     background: floralwhite;
     border: 2px solid #A60837;
@@ -215,7 +214,7 @@ button:hover {
 
 form p {
     font-family: 'Manifold Sans', sans-serif, Helvetica, system-ui;
-    font-size: clamp(1rem,3vw,1.156rem);
+    font-size: clamp(1rem,3vw,1.125rem);
     color: #111;
     text-align: center;
 }
