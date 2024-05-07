@@ -34,7 +34,7 @@ body {
     height: 100vh; 
     height: 100dvh;
     margin: 0;
-    background: whitesmoke;
+    background-color: floralwhite;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
