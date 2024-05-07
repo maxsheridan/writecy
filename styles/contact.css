@@ -139,22 +139,18 @@ nav a:nth-child(n+2) {
 
 nav a {
     color: #111;
+    text-decoration: none;
 }
 
-nav.links a.active {
-    color: #A60837;
-}
-
+nav.links a.active, 
 nav.title a:hover,
 nav.links a:hover {
     color: #A60837;
 }
 
-
-nav a {
-    text-decoration: none;
+.socials:hover {
+    fill: #A60837;
 }
-
 .content {
     flex: 1;
     display: flex;
