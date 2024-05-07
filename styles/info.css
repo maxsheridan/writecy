@@ -87,12 +87,18 @@ h1 {
     background-color: floralwhite;
 }
 
-nav.title {
-    position: relative;
-    flex: .4; 
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center;
+nav.title a:nth-child(2) {
+    margin-left: -.25rem;
+}
+
+nav.title a:nth-child(3) {
+    margin-left: -.75rem;
+}
+
+svg.socials {
+    width: clamp(1.1rem,3vw,1.25rem);
+    height: auto;
+    vertical-align: text-bottom;
 }
 
 nav.links {
@@ -100,7 +106,7 @@ nav.links {
     display: flex; 
     flex: .6;
     justify-content: flex-end; 
-    align-items: center; ;
+    align-items: center;
 }
 
 .nav p:first-child {
