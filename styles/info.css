@@ -63,6 +63,11 @@ p {
     line-height: 1.6;
 }
 
+a {
+    color: #111;
+    text-decoration: underline;
+}
+
 h1 {
     font-family: 'Plastic Script Light', sans-serif, Helvetica, Arial, system-ui;
     font-size: clamp(1.45rem,4vw,1.7rem);
