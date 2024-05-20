@@ -63,7 +63,7 @@ p {
     line-height: 1.6;
 }
 
-p a {
+a {
     color: #111;
     text-decoration: underline;
 }
