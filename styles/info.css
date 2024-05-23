@@ -41,7 +41,7 @@ body {
 }
 
 main {
-    opacity: 0;
+    opacity: .1;
     animation: fadeIn 1s ease-out forwards;
 }
 
