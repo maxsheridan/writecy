@@ -49,7 +49,7 @@ main {
 /* Define the keyframes for the fadeIn animation */
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: .1;
     }
     to {
         opacity: 1;
