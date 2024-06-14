@@ -245,10 +245,6 @@ form p {
         display: block;
     }
 
-    .content {
-        padding: 8rem 0rem;
-    }
-
     header {
         position: fixed;
         display: flex;
