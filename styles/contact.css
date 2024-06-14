@@ -65,7 +65,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8rem 1.5rem;
+    padding: 8rem 0;
 }
 
 p {
@@ -243,7 +243,10 @@ form p {
 @media (max-width: 768px) {
     .page {
         display: block;
-        height: 100%;
+    }
+
+    .content {
+        padding: 8rem 0rem;
     }
 
     header {
