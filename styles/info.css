@@ -54,6 +54,23 @@ main {
     }
 }
 
+.page {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100dvh;
+}  
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 41rem;
+    padding: 8rem 0;
+    margin: 0 auto;
+}
+
 p {
     font-family: 'Manifold Sans', sans-serif, Helvetica, Arial, system-ui;
     font-size: clamp(1rem,3vw,1.125rem);
@@ -76,7 +93,7 @@ h1 {
     word-spacing: -2px;
     color: #111;
     line-height: 1.2;
-    margin: 3rem 0 1.5rem 0;
+    margin: 0 0 1.5rem;
 }
 
 .header {
@@ -131,25 +148,6 @@ nav.links a:hover {
     padding-right: clamp(1rem,3vw,2rem);
 }
 
-.page {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-}   
-
-section {
-    flex: 0 0 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5.5rem 1.5rem;
-} 
-
-.text {
-    max-width: 41rem;
-    margin: 0 auto;
-}
-
 hr {
     height: 1px;
     background: #A60837;
@@ -202,7 +200,7 @@ hr {
         display: block;
     }
 
-    section {
+    .content {
         padding: 8rem 1rem;
     }
 }
