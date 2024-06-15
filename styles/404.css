@@ -31,11 +31,10 @@ html a:hover {
 }
 
 body { 
-    margin: 0;
     background-color: floralwhite;
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
     text-size-adjust: none;
 } 
 
@@ -59,9 +58,9 @@ main {
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    text-align: center; 
+    text-align: center;
+    min-height: 100dvh; 
     min-height: 100vh;
-    min-height: 100dvh;
 }
 
 p {
