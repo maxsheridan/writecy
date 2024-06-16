@@ -63,8 +63,8 @@ main {
     height: 4rem;  
     background-color: floralwhite;
     border-bottom: 3px solid #111;
-    padding-left: clamp(1rem,3vw,2rem);
-    padding-right: clamp(1rem,3vw,2rem);
+    padding-left: clamp(1rem,3vw,1.5rem);
+    padding-right: clamp(1rem,3vw,1.5rem);
 }
 
 nav.title {
@@ -138,8 +138,8 @@ h1 {
 form {
     width: 100%;
     max-width: 32rem;
-    padding-left: clamp(1rem,3vw,2rem);
-    padding-right: clamp(1rem,3vw,2rem);
+    padding-left: clamp(1rem,3vw,1.5rem);
+    padding-right: clamp(1rem,3vw,1.5rem);
 }
 
 #hello {
@@ -206,8 +206,8 @@ form p {
     height: 4rem;  
     background-color: floralwhite;
     border-top: 3px solid #111;
-    padding-left: clamp(1rem,3vw,2rem);
-    padding-right: clamp(1rem,3vw,2rem);
+    padding-left: clamp(1rem,3vw,1.5rem);
+    padding-right: clamp(1rem,3vw,1.5rem);
 }
 
 .socials {

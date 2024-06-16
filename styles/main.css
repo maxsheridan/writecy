@@ -69,8 +69,8 @@ main {
     height: 4rem;  
     background-color: floralwhite;
     border-bottom: 3px solid #111;
-    padding-left: clamp(1rem,3vw,2rem);
-    padding-right: clamp(1rem,3vw,2rem);
+    padding-left: clamp(1rem,3vw,1.5rem);
+    padding-right: clamp(1rem,3vw,1.5rem);
 }
 
 nav.title {
@@ -119,7 +119,7 @@ article {
     width: 100%;
     max-width: 41rem;
     margin: 0 auto;
-    padding: 5rem 2rem 0 2rem;
+    padding: 5rem 1.5rem 0 1.5rem;
 }
 
 article:first-of-type {
@@ -236,8 +236,8 @@ blockquote h2 {
     height: 4rem;  
     background-color: floralwhite;
     border-top: 3px solid #111;
-    padding-left: clamp(1rem,3vw,2rem);
-    padding-right: clamp(1rem,3vw,2rem);
+    padding-left: clamp(1rem,3vw,1.5rem);
+    padding-right: clamp(1rem,3vw,1.5rem);
 }
 
 /*——Special classes*/
