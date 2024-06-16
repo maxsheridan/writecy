@@ -53,39 +53,6 @@ main {
     }
 }
 
-.page {
-    display: flex;
-    min-height: 100vh;
-    min-height: 100dvh;
-}
-
-.content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8rem 0;
-}
-
-p {
-    font-family: 'Manifold Sans', sans-serif, Helvetica, Arial, system-ui;
-    font-size: clamp(1rem,3vw,1.125rem);
-    font-weight: 400;
-    font-style: normal;
-    color: #111;
-    line-height: 1.6;
-}
-
-h1 {
-    font-family: 'Plastic Script Light', sans-serif, Helvetica, Arial, system-ui;
-    font-size: clamp(1.45rem,4vw,1.7rem);
-    font-weight: 400;
-    font-style: normal;
-    word-spacing: -2px;
-    color: #111;
-    line-height: 1.2;
-}
-
 .header {
     position: fixed; 
     left: 0; 
@@ -96,7 +63,6 @@ h1 {
     height: 4rem;  
     background-color: floralwhite;
     border-bottom: 3px solid #111;
-    padding: 0; 
 }
 
 nav.title {
@@ -136,6 +102,39 @@ nav.links a:hover {
 
 .bar p:last-child {
     padding-right: clamp(1rem,3vw,2rem);
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+}
+
+p {
+    font-family: 'Manifold Sans', sans-serif, Helvetica, Arial, system-ui;
+    font-size: clamp(1rem,3vw,1.125rem);
+    font-weight: 400;
+    font-style: normal;
+    color: #111;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Plastic Script Light', sans-serif, Helvetica, Arial, system-ui;
+    font-size: clamp(1.45rem,4vw,1.7rem);
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: -2px;
+    color: #111;
+    line-height: 1.2;
 }
 
 form {
