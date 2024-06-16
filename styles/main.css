@@ -103,7 +103,7 @@ nav a {
     text-decoration: none !important;
 }
 
-nav a.active, 
+nav:not(.title) a.active, 
 nav a:hover {
     color: #A60837;
 }
