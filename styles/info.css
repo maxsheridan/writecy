@@ -52,7 +52,7 @@ main {
     }
 }
 
-.header {
+header {
     position: fixed; 
     left: 0; 
     top: 0; 
@@ -149,7 +149,7 @@ hr {
     margin: 1.75rem 0;
 }
 
-.footer {
+footer {
     position: fixed; 
     left: 0; 
     bottom: 0; 

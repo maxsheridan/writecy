@@ -59,7 +59,7 @@ main {
     }
 }
 
-.header {
+header {
     position: fixed; 
     left: 0; 
     top: 0; 
@@ -226,7 +226,7 @@ blockquote h2 {
     color: #A60837;
 }
 
-.footer {
+footer {
     position: fixed; 
     left: 0; 
     bottom: 0; 

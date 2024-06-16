@@ -53,7 +53,7 @@ main {
     }
 }
 
-.header {
+header {
     position: fixed; 
     left: 0; 
     top: 0; 
@@ -196,7 +196,7 @@ form p {
     text-align: center;
 }
 
-.footer {
+footer {
     position: fixed; 
     left: 0; 
     bottom: 0; 
