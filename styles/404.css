@@ -68,8 +68,8 @@ p {
     font-size: clamp(1rem,3vw,1.125rem);
     font-weight: 400;
     font-style: normal;
-    color: #111;
     line-height: 2;
+    color: #111;
 }
 
 h1 {

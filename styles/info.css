@@ -62,6 +62,8 @@ main {
     height: 4rem;  
     background-color: floralwhite;
     border-bottom: 3px solid #111;
+    padding-left: clamp(1rem,3vw,2rem);
+    padding-right: clamp(1rem,3vw,2rem);
 }
 
 nav.title {
@@ -81,26 +83,22 @@ nav.links {
 }
 
 nav.links a:nth-child(2) {
-    padding: 0 .25rem 0 .25rem;
+    padding: 0 1rem 0 1rem;
 }
 
 nav a {
+    font-family: 'Manifold Sans', sans-serif, Helvetica, Arial, system-ui;
+    font-size: clamp(1rem,3vw,1.125rem);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
     color: #111;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-nav.links a.active, 
-nav.title a:hover,
-nav.links a:hover {
+nav a.active, 
+nav a:hover {
     color: #A60837;
-}
-
-.bar p:first-child {
-    padding-left: clamp(1rem,3vw,2rem);
-}
-
-.bar p:last-child {
-    padding-right: clamp(1rem,3vw,2rem);
 }
 
 .page {
@@ -116,7 +114,7 @@ nav.links a:hover {
     justify-content: center;
     align-items: flex-start;
     max-width: 41rem;
-    padding: 8rem 0;
+    padding: 10rem 0;
     margin: 0 auto;
 }
 
@@ -131,7 +129,6 @@ p {
 
 a {
     color: #111;
-    text-decoration: underline;
 }
 
 h1 {
@@ -162,6 +159,8 @@ hr {
     height: 4rem;
     background-color: floralwhite;  
     border-top: 3px solid #111;
+    padding-left: clamp(1rem,3vw,2rem);
+    padding-right: clamp(1rem,3vw,2rem);
 }
 
 .socials {
