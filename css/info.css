@@ -90,7 +90,7 @@ nav a:hover {
 
 main {
     opacity: .1;
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 500ms ease-out forwards;
 }
 
 @keyframes fadeIn {

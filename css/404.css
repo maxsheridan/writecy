@@ -40,10 +40,9 @@ body {
 
 main {
     opacity: .1;
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 500ms ease-out forwards;
 }
 
-/* Define the keyframes for the fadeIn animation */
 @keyframes fadeIn {
     from {
         opacity: .1;
