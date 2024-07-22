@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Manifold Sans';
+    src: url('/assets/type/Manifold_Sans_Light_Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Plastic Script Light';
+    src: url('/assets/type/Plastic_Script_Light.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+html {
+    font-size: 16px;
+        cursor: url('/assets/graphics/old_school_point.svg'), auto;
+}
+    
+html a:hover {
+        cursor: url('/assets/graphics/old_school_hover.svg'), auto;
+}
+
+body { 
+    background-color: floralwhite;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+} 
+
+main {
+    animation: fadeIn 500ms ease-out forwards;
+    opacity: .1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: .1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.page {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    min-height: 100dvh;
+    text-align: center; 
+}
+
+p {
+    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
+    font-size: clamp(1rem,3vw,1.125rem);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2;
+    color: #111;
+}
+
+h1 {
+    font-family: 'Plastic Script Light', Helvetica, Arial, sans-serif;
+    font-size: clamp(2.75rem,6vw,3.75rem); 
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.2;
+    word-spacing: -1rem;
+    color: #A60837;
+}
+
+a {
+    color: #A60837;
+    text-decoration: none;
+}
