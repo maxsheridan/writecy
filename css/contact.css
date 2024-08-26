@@ -14,25 +14,37 @@
     font-display: swap;
 }
 
+:root {
+    --background-color: floralwhite;
+    --primary-color: #111;
+    --secondary-color: #A60837;
+    --tertiary-color: #006BA6;
+    --body-font: 'Manifold Sans', Helvetica, Arial, sans-serif;
+    --body-font-size: clamp(1rem,3vw,1.125rem);
+    --heading-font: 'Plastic Script Light', Helvetica, Arial, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overscroll-behavior: none;
+    font-weight: 400;
+    font-style: normal;
 }
 
 html {
     font-size: 16px;
-    cursor: url('/assets/graphics/old_school_point.svg'), auto;
+    cursor: url('/assets/graphics/point.svg'), auto;
     scroll-behavior: smooth;
 }
 
 html a:hover, button:hover {
-    cursor: url('/assets/graphics/old_school_hover.svg'), auto;
+    cursor: url('/assets/graphics/hover.svg'), auto;
 }
 
 body { 
-    background-color: floralwhite;
+    background-color: var(--background-color);
     -ms-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
@@ -50,8 +62,8 @@ header {
     height: 4rem;
     padding-right: clamp(1rem,3vw,1.5rem);
     padding-left: clamp(1rem,3vw,1.5rem);
-    border-bottom: 2px solid #111;
-    background-color: floralwhite;
+    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--background-color);
 }
 
 nav.title {
@@ -75,18 +87,16 @@ nav.links a:nth-child(2) {
 }
 
 nav a {
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
     line-height: 1.6;
-    color: #111;
+    color: var(--primary-color);
     text-decoration: none !important;
 }
 
 nav:not(.title) a.active, 
 nav a:hover {
-    color: #A60837;
+    color: var(--secondary-color);
 }
 
 main {
@@ -118,22 +128,18 @@ main {
 }
 
 p {
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
     line-height: 1.6;
-    color: #111;
+    color: var(--primary-color);
 }
 
 h1 {
-    font-family: 'Plastic Script Light', Helvetica, Arial, sans-serif;
+    font-family: var(--heading-font);
     font-size: clamp(1.45rem,4vw,1.7rem);
-    font-weight: 400;
-    font-style: normal;
     word-spacing: -2px;
     line-height: 1.2;
-    color: #111;
+    color: var(--primary-color);
 }
 
 form {
@@ -150,15 +156,15 @@ form {
 }
 
 label {
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
-    color: #111;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    color: var(--primary-color);
     
 }
 
 input, textarea {
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
     width: 100%;
     margin: .5rem 0 2rem;
     padding: 1rem .5rem 1rem .5rem;
@@ -176,21 +182,21 @@ textarea {
 
 button {  
     padding: .5rem 1.5rem;
-    border: 2px solid #A60837;
+    border: 2px solid var(--secondary-color);
     border-radius: .15rem .15rem .15rem .15rem;  
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
-    color: #A60837;
-    background-color: floralwhite;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    color: var(--secondary-color);
+    background-color: var(--background-color);
 }
 
 button:hover {
-    border: 2px solid #006BA6;
-    color: #006BA6;
+    border: 2px solid var(--tertiary-color);
+    color: var(--tertiary-color);
 }
 
 ::placeholder {
-    color: #111;
+    color: var(--primary-color);
     text-decoration: line-through;
     opacity: .4;
 }
@@ -198,10 +204,10 @@ button:hover {
 /*Thanks message*/
 
 form p {
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
     text-align: center;
-    color: #111;
+    color: var(--primary-color);
 }
 
 footer {
@@ -215,7 +221,7 @@ footer {
     padding-right: clamp(1rem,3vw,1.5rem);
     padding-left: clamp(1rem,3vw,1.5rem);
     border-top: 2px solid #111; 
-    background-color: floralwhite;;
+    background-color: var(--background-color);;
 }
 
 .socials {
@@ -233,7 +239,7 @@ footer {
 }
 
 .social-icons:hover {
-    fill: #A60837;
+    fill: var(--secondary-color);
 }
 
 .copyright {

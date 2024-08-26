@@ -14,6 +14,15 @@
     font-display: swap;
 }
 
+:root {
+    --background-color: floralwhite;
+    --primary-color: #111;
+    --secondary-color: #A60837;
+    --body-font: 'Manifold Sans', Helvetica, Arial, sans-serif;
+    --body-font-size: clamp(1rem,3vw,1.125rem);
+    --heading-font: 'Plastic Script Light', Helvetica, Arial, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,15 +32,15 @@
 
 html {
     font-size: 16px;
-    cursor: url('/assets/graphics/old_school_point.svg'), auto;
+    cursor: url('/assets/graphics/point.svg'), auto;
 }    
 
 html a:hover {
-    cursor: url('/assets/graphics/old_school_hover.svg'), auto;
+    cursor: url('/assets/graphics/hover.svg'), auto;
 }
 
 body {
-    background-color: floralwhite;
+    background-color: var(--background-color);
     -ms-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
@@ -49,8 +58,8 @@ header {
     height: 4rem;
     padding-right: clamp(1rem,3vw,1.5rem);
     padding-left: clamp(1rem,3vw,1.5rem);
-    border-bottom: 2px solid #111;
-    background-color: floralwhite;
+    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--background-color)
 }
 
 nav.title {
@@ -74,18 +83,16 @@ nav.links a:nth-child(2) {
 }
 
 nav a {
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
     line-height: 1.6;
-    color: #111;
+    color: var(--primary-color);
     text-decoration: none !important;
 }
 
 nav:not(.title) a.active, 
 nav a:hover {
-    color: #A60837;
+    color: var(--secondary-color);
 }
 
 main {
@@ -120,26 +127,23 @@ main {
 }
 
 p {
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
     line-height: 1.6;
-    color: #111;
+    color: var(--primary-color);
+    margin: 0 0 1rem;
 }
 
 a {
-    color: #111;
+    color: var(--primary-color);
 }
 
 h1 {
-    font-family: 'Plastic Script Light', Helvetica, Arial, sans-serif;
+    font-family: var(--heading-font);
     font-size: clamp(1.45rem,4vw,1.7rem);
-    font-weight: 400;
-    font-style: normal;
     word-spacing: -2px;
     line-height: 1.2;
-    color: #111;
+    color: var(--primary-color);
     margin: 0 0 1.5rem;
 }
 
@@ -148,7 +152,7 @@ hr {
     height: 1px; 
     margin: 1.75rem 0;
     border: 0;
-    background: #A60837;
+    background: var(--secondary-color);
 }
 
 footer {
@@ -161,8 +165,8 @@ footer {
     height: 4rem; 
     padding-right: clamp(1rem,3vw,1.5rem);
     padding-left: clamp(1rem,3vw,1.5rem);
-    border-top: 2px solid #111; 
-    background-color: floralwhite;;
+    border-top: 2px solid var(--primary-color); 
+    background-color: var(--background-color);;
 }
 
 .socials {
@@ -180,7 +184,7 @@ footer {
 }
 
 .social-icons:hover {
-    fill: #A60837;
+    fill: var(--secondary-color);
 }
 
 .copyright {
