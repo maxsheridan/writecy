@@ -14,24 +14,35 @@
     font-display: swap;
 }
 
+:root {
+    --background-color: floralwhite;
+    --primary-color: #111;
+    --secondary-color: #A60837;
+    --body-font: 'Manifold Sans', Helvetica, Arial, sans-serif;
+    --body-font-size: clamp(1rem,3vw,1.125rem);
+    --heading-font: 'Plastic Script Light', Helvetica, Arial, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overscroll-behavior: none;
+    font-weight: 400;
+    font-style: normal;
 }
 
 html {
     font-size: 16px;
-        cursor: url('/assets/graphics/old_school_point.svg'), auto;
+        cursor: url('/assets/graphics/point.svg') 5 -5, auto;
 }
     
 html a:hover {
-        cursor: url('/assets/graphics/old_school_hover.svg'), auto;
+        cursor: url('/assets/graphics/hover.svg') 5 -5, auto;
 }
 
 body { 
-    background-color: floralwhite;
+    background-color: var(--background-color);
     -ms-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
@@ -63,25 +74,23 @@ main {
 }
 
 p {
-    font-family: 'Manifold Sans', Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,3vw,1.125rem);
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
     line-height: 2;
-    color: #111;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
 h1 {
-    font-family: 'Plastic Script Light', Helvetica, Arial, sans-serif;
+    font-family: var(--heading-font);
     font-size: clamp(2.75rem,6vw,3.75rem); 
     font-weight: 500;
     font-style: normal;
     line-height: 1.2;
     word-spacing: -1rem;
-    color: #A60837;
-}
-
-a {
-    color: #A60837;
-    text-decoration: none;
+    color: var(--secondary-color);
 }
