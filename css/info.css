@@ -169,6 +169,10 @@ footer {
     background-color: var(--background-color);;
 }
 
+footer p {
+    margin: 0 !important;
+}
+
 .socials {
     display: flex; 
     justify-content: flex-start; 
