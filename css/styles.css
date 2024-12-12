@@ -140,7 +140,19 @@ p:last-child {
 }
 
 a {
+    display: inline; 
+    position: relative;
+    line-height: 1.6;
+    text-decoration: none;
     color: var(--primary-color);
+}
+
+a:not(header a):not(footer a):not(button[type="submit"]) {
+    background-image: linear-gradient(transparent 80%, var(--secondary-color) 80%);
+    background-size: 100% 10px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    padding-bottom: .15rem;
 }
 
 h1 {
@@ -410,7 +422,7 @@ form p {
     color: var(--primary-color);
 }
 
-/* -----Info stylest----- */
+/* -----Info styles----- */
 
 #info .content {
     justify-content: center;
@@ -424,4 +436,17 @@ form p {
     #contact .content, #info .content {
         padding: 8rem 0;
     }
+}
+
+/* -----404 styles----- */
+
+#error.page {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+}
+
+#error h1 {
+    color: var(--secondary-color);
 }
