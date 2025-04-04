@@ -28,6 +28,11 @@
     --form-field-background-color: white;
 }
 
+:focus-visible {
+    outline: 3px solid #AD0000;
+    outline-offset: 2px;
+}
+
 @media (prefers-color-scheme: dark){
     :root {
         --primary-color: #D3CEC1;
@@ -37,11 +42,9 @@
         --background-color: #111;
         --dark-primary-color: var(--background-color);
     }
-}
-
-:focus-visible {
-    outline: 3px solid #FF7A7A;
-    outline-offset: 2px;
+    :focus-visible {
+        outline: 3px solid #FF7A7A;
+    }
 }
 
 * {
@@ -264,4 +267,14 @@ footer {
     width: auto;
     height: clamp(9px, 2vw, 10px);
     padding-left: 3px;
+}
+
+.error-message, 
+.thanks {
+    display: inline !important;
+    color: var(--accent-color);
+}
+
+.error-message {
+    margin-inline-start: 1rem;
 }
