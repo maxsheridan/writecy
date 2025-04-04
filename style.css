@@ -5,12 +5,13 @@
     font-style:normal;
     font-display:swap
 }
-    @font-face {font-family:'Plastic Script Light';
-        src:url(/assets/type/Plastic_Script_Light.woff2) format('woff2');
-        font-weight:400;
-        font-style:normal;
-        font-display:swap
-    }
+
+@font-face {font-family:'Plastic Script Light';
+    src:url(/assets/type/Plastic_Script_Light.woff2) format('woff2');
+    font-weight:400;
+    font-style:normal;
+    font-display:swap
+}
 
 :root {
     --gap: 1.25rem;
