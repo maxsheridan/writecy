@@ -211,10 +211,7 @@ hr {
 .pagination-inner {
     display: flex;
     justify-content: space-between;
-    width: 100%}
-
-.pagination p {
-    color: var(--accent-color);
+    width: 100%
 }
 
 footer {
