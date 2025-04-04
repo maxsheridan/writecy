@@ -18,7 +18,7 @@
     --big-gap: 2rem;
     --max-width:42rem;
     --body-font: 'Manifold Sans', monospace;
-    --body-font-size: clamp(1.15rem,3vw,1.2rem);
+    --body-font-size: clamp(1.063rem,3vw,1.2rem);
     --heading-font: 'Plastic Script Light', monospace;
     --heading-font-size: clamp(1.45rem,4vw,1.7rem);
     --primary-color: #111;
