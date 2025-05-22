@@ -92,6 +92,8 @@ body {
 header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     left: 0;
     top: 0;
@@ -104,23 +106,13 @@ header {
     background-color: var(--background-color);
 }
 
-.title {
+nav ul {
     display: flex;
-    flex: .4;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
-.bunch-of-links {
-    display: flex;
-    flex: .6;
-    justify-content: flex-end;
-    align-items: center;
     gap: 1rem;
+    list-style: none;
 }
 
-.bunch-of-links a.active {
+nav a.active {
     color: var(--accent-color);
 }
 
@@ -171,7 +163,7 @@ a {
     a:hover {
         opacity: .6;
     }
-    nav a:hover, .socials a:hover {
+    header a:hover, .socials a:hover {
         color: var(--accent-color);
         opacity: 1;
     }
@@ -265,6 +257,15 @@ footer {
 
 .error-message {
     margin-inline-start: 1rem;
+}
+
+.vh {
+    position:absolute;
+    overflow:hidden;
+    width:1px;
+    height:1px;
+    clip-path:inset(50%);
+    white-space:nowrap;
 }
 
 @media (max-width:768px) {

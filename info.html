@@ -26,13 +26,22 @@
     </head>
     <body>
         <header class="margins-off linkstyling-off">
-            <nav class="title">
-                <a href="/">Write CY</a>
-            </nav>
-            <nav class="bunch-of-links">
-                <a href="/">News</a>
-                <a href="/info" class="active">Info</a>
-                <a href="/contact">Hello</a>
+            <a href="/" aria-label="Write CY home" class="title">
+                Write CY
+            </a>
+            <h2 id="nav-label" class="vh">Main Menu</h2>
+            <nav aria-labelledby="nav-label">
+                <ul class="margins-off">
+                    <li>
+                        <a href="/">News</a>
+                    </li>
+                    <li>
+                        <a href="/info" aria-current="page" class="active">Info</a>
+                    </li>
+                    <li>
+                        <a href="/contact" aria-label="Contact">Hello</a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <main id="info">
@@ -43,9 +52,9 @@
                 <p>
                     Write CY is a platform for community creative writing and storytelling founded in 2015 by&#32;<a href="https://maxsheridan.com">Max Sheridan</a>&#32;and&#32;<a href="https://www.facebook.com/marilenazackheos/">Marilena Zackheos</a>. We're based in Nicosia, Cyprus.
                 </p>
-                <hr>
+                <hr aria-hidden="true">
                 <p>
-                    Site info: This site is a few HTML files hosted on GitHub. Body copy is set in Erika by Gruppo Due, headings are in Mono 45 Headline by EuropaType. Audio player is by Weird Bubba Studio. Design and art are by&#32;<a href="https://www.maxsheridan.com/tug-wells">Tug Wells</a>.
+                    Site info: This site is a few HTML files hosted on GitHub. Body copy is set in Erika by Gruppo Due, headings are in Mono 45 Headline by EuropaType. Audio player is by <a href="https://weirdbubba.maxsheridan.com">Weird Bubba Studio.</a> Design and art are by&#32;<a href="https://www.maxsheridan.com/tug-wells">Tug Wells</a>.
                 </p>
             </div>
         </main>

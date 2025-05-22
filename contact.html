@@ -23,17 +23,26 @@
         <meta property="og:image:type" content="image/webp">
         <meta property="og:image:width" content="720">
         <meta property="og:image:height" content="720">
-        <style>form{width:100%;margin-block-start:var(--big-gap);}label{font-family:var(--font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--primary-color)}input{width:100%;margin-block-start:.5rem;margin-block-end:var(--big-gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}textarea{min-width:100%;max-width:100%;min-height:100px;max-height:600px;margin-block-end:var(--gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--body-font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}::placeholder{color:rgb(128 128 128 / .4);text-decoration:line-through}button{border:1.5px solid var(--accent-color);border-radius:.25rem;padding:1rem 2rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--background-color);background-color:var(--accent-color);cursor:pointer}@media(hover:hover) and (pointer:fine){button:hover{border:1.5px solid var(--primary-color);background-color:var(--primary-color)}}</style>
+        <style>form{width:100%;margin-block-start:var(--big-gap);}label{font-family:var(--font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--primary-color)}input{width:100%;margin-block-start:.5rem;margin-block-end:var(--big-gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}textarea{min-width:100%;max-width:100%;min-height:100px;max-height:600px;margin-block-end:var(--gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--body-font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}button{border:1.5px solid var(--accent-color);border-radius:.25rem;padding:1rem 2rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--background-color);background-color:var(--accent-color);cursor:pointer}@media(hover:hover) and (pointer:fine){button:hover{border:1.5px solid var(--primary-color);background-color:var(--primary-color)}}</style>
     </head>
     <body>
         <header class="margins-off linkstyling-off">
-            <nav class="title">
-                <a href="/">Write CY</a>
-            </nav>
-            <nav class="bunch-of-links">
-                <a href="/">News</a>
-                <a href="/info">Info</a>
-                <a href="/contact" class="active">Hello</a>
+            <a href="/" aria-label="Write CY home" class="title">
+                Write CY
+            </a>
+            <h2 id="nav-label" class="vh">Main Menu</h2>
+            <nav aria-labelledby="nav-label">
+                <ul class="margins-off">
+                    <li>
+                        <a href="/">News</a>
+                    </li>
+                    <li>
+                        <a href="/info">Info</a>
+                    </li>
+                    <li>
+                        <a href="/contact" aria-current="page" class="active" aria-label="Contact">Hello</a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <main id="contact">
@@ -54,7 +63,7 @@
                         oninvalid="this.setCustomValidity('A real email address please.')"
                         oninput="this.setCustomValidity('')">
                     <label for="entry.708594186">Message</label>
-                    <textarea name="entry.708594186" id="entry.708594186" required placeholder="Dear writecy.com, I’ve spotted some errors on your website."
+                    <textarea name="entry.708594186" id="entry.708594186" required
                         oninvalid="this.setCustomValidity('Write something!')"
                         oninput="this.setCustomValidity('')"></textarea>
                     <button type="submit">Send</button>

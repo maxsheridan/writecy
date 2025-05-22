@@ -27,13 +27,22 @@
     </head>
     <body>
         <header class="margins-off linkstyling-off">
-            <nav class="title">
-                <a href="/">Write CY</a>
-            </nav>
-            <nav class="bunch-of-links">
-                <a href="/" class="active">News</a>
-                <a href="/info">Info</a>
-                <a href="/contact">Hello</a>
+            <a href="/" aria-label="Write CY home" class="title">
+                Write CY
+            </a>
+            <h2 id="nav-label" class="vh">Main Menu</h2>
+            <nav aria-labelledby="nav-label">
+                <ul class="margins-off">
+                    <li>
+                        <a href="/" aria-current="page" class="active">News</a>
+                    </li>
+                    <li>
+                        <a href="/info">Info</a>
+                    </li>
+                    <li>
+                        <a href="/contact" aria-label="Contact">Hello</a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <main id="blog-page-one">
@@ -365,8 +374,9 @@
                 </div>
             </div>   
         </main> 
-        <footer class="margins-off linkstyling-off">
-            <div class="socials">
+        <footer role="contentinfo" aria-label="Footer" class="margins-off">
+            <h2 class="vh">Social links and Copyright</h2>
+            <div class="socials margins-off">
                 <a href="https://soundcloud.com/user-178729486" aria-label="Soundcloud icon">
                     <svg class="social-doodads" viewBox="0 0 256 256"><path d="M24 120v48a8 8 0 0 1-16 0v-48a8 8 0 0 1 16 0m24-32a8 8 0 0 0-8 8v96a8 8 0 0 0 16 0V96a8 8 0 0 0-8-8m32-8a8 8 0 0 0-8 8v104a8 8 0 0 0 16 0V88a8 8 0 0 0-8-8m32-32a8 8 0 0 0-8 8v136a8 8 0 0 0 16 0V56a8 8 0 0 0-8-8m110.8 58.3A80 80 0 0 0 144 40a8 8 0 0 0 0 16 64 64 0 0 1 63.7 57.5 8 8 0 0 0 6.4 7A32 32 0 0 1 208 184h-64a8 8 0 0 0 0 16h64a48 48 0 0 0 14.8-93.7" fill="currentColor"/></svg>
                 </a>
@@ -375,9 +385,9 @@
                 </a>
             </div>
             <div class="copyright">
-                <p>
+                <span>
                     ©2015+WCY
-                </p>
+                </span>
             </div>
         </footer>
         <script>document.addEventListener("DOMContentLoaded",()=>{const resetAudioPlayers=()=>{document.querySelectorAll(".audio-player").forEach((e)=>{const audio=e.querySelector("audio");const playPause=e.querySelector(".play-pause");const progress=e.querySelector(".progress input");const progressFill=e.querySelector(".progress-filled");audio.currentTime=0;audio.pause();playPause.className="play-pause play";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><polygon points="10,6.9 10,23.1 24,15" fill="currentColor"></polygon></svg>`;progressFill.style.width="0%";progress.value=0})};resetAudioPlayers();document.querySelectorAll(".audio-player").forEach((e)=>{const audio=e.querySelector("audio");const playPause=e.querySelector(".play-pause");const progress=e.querySelector(".progress input");const progressFill=e.querySelector(".progress-filled");playPause.addEventListener("click",()=>{if(audio.paused){document.querySelectorAll("audio").forEach((a)=>a!==audio&&a.pause());audio.play()}else{audio.pause()}});audio.addEventListener("play",()=>{playPause.className="play-pause pause";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><rect x="10" y="8" width="3" height="14" fill="currentColor"></rect><rect x="17" y="8" width="3" height="14" fill="currentColor"></rect></svg>`});audio.addEventListener("pause",()=>{playPause.className="play-pause play";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><polygon points="10,6.9 10,23.1 24,15" fill="currentColor"></polygon></svg>`});audio.addEventListener("timeupdate",()=>{const percentage=(audio.currentTime/audio.duration)*100||0;progressFill.style.width=`${percentage}%`;progress.value=percentage});progress.addEventListener("input",()=>{audio.currentTime=(progress.value/100)*audio.duration})})});window.addEventListener("load",()=>{document.querySelectorAll(".audio-player audio").forEach((audio)=>{audio.currentTime=0;audio.pause()})});</script>
