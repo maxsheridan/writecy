@@ -23,7 +23,7 @@
         <meta property="og:image:type" content="image/webp">
         <meta property="og:image:width" content="720">
         <meta property="og:image:height" content="720">
-        <style>form{width:100%;margin-block-start:var(--big-gap);}label{font-family:var(--font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--primary-color)}input{width:100%;margin-block-start:.5rem;margin-block-end:var(--big-gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}textarea{min-width:100%;max-width:100%;min-height:100px;max-height:600px;margin-block-end:var(--gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--body-font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}button{border:1.5px solid var(--accent-color);border-radius:.25rem;padding:1rem 2rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--background-color);background-color:var(--accent-color);cursor:pointer}@media(hover:hover) and (pointer:fine){button:hover{border:1.5px solid var(--primary-color);background-color:var(--primary-color)}}</style>
+        <style>form{width:100%;margin-block-start:var(--big-gap);}label{font-family:var(--font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--primary-color)}input{width:100%;margin-block-start:.5rem;margin-block-end:var(--big-gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}textarea{min-width:100%;max-width:100%;min-height:100px;max-height:600px;margin-block-end:var(--gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--body-font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}button{border:1.5px solid var(--accent-color);border-radius:.25rem;padding:1rem 2rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--background-color);background-color:var(--accent-color);cursor:pointer}.thanks{color:var(--accent-color)}@media(hover:hover) and (pointer:fine){button:hover{border:1.5px solid var(--primary-color);background-color:var(--primary-color)}}</style>
     </head>
     <body>
         <header class="margins-off linkstyling-off">
@@ -54,21 +54,37 @@
                     Fill out the form to get in touch. We promise not to add you to any mailing lists.
                 </p>
                 <form id="contactForm" name="contactForm" novalidate>
-                    <label for="entry.245058957">Name</label>
-                    <input type="text" name="entry.245058957" id="entry.245058957" required
-                        oninvalid="this.setCustomValidity('Name please.')"
-                        oninput="this.setCustomValidity('')">
-                    <label for="entry.2118440755">Email</label>
-                    <input type="email" name="entry.2118440755" id="entry.2118440755" required
-                        oninvalid="this.setCustomValidity('A real email address please.')"
-                        oninput="this.setCustomValidity('')">
-                    <label for="entry.708594186">Message</label>
-                    <textarea name="entry.708594186" id="entry.708594186" required
-                        oninvalid="this.setCustomValidity('Write something!')"
-                        oninput="this.setCustomValidity('')"></textarea>
-                    <button type="submit">Send</button>
+                    <fieldset>
+                        <legend class="vh">
+                            Contact Write CY
+                        </legend>
+                        <label for="entry.245058957">
+                            Name
+                        </label>
+                        <span id="nameHelp" class="vh">
+                            Name please, even a fake one. This field is required.
+                        </span>
+                        <input type="text" name="entry.245058957" id="entry.245058957" required aria-required="true" aria-describedby="nameHelp" oninvalid="this.setCustomValidity('Name please.')" oninput="this.setCustomValidity('')">
+                        <label for="entry.2118440755">
+                            Email
+                        </label>
+                        <span id="emailHelp" class="vh">
+                            Email address please, a real one. This field is required.
+                        </span>
+                        <input type="email" name="entry.2118440755" id="entry.2118440755" required  aria-required="true" aria-describedby="emailHelp" oninvalid="this.setCustomValidity('A real email address please.')" oninput="this.setCustomValidity('')">
+                        <label for="entry.708594186">
+                            Message
+                        </label>
+                        <span id="messageHelp" class="vh">
+                            Write something! This field is required.
+                        </span>
+                        <textarea name="entry.708594186" id="entry.708594186" required aria-required="true" aria-describedby="messageHelp" oninvalid="this.setCustomValidity('Write something!')" oninput="this.setCustomValidity('')"></textarea>
+                        <button type="submit">
+                            Send
+                        </button>
+                    </fieldset>
                 </form>
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;"></iframe>
+                <p id="formStatus" class="vh" aria-live="assertive" role="alert"></p>
             </div>
         </main> 
         <footer class="margins-off linkstyling-off">
@@ -86,7 +102,7 @@
                 </p>
             </div>
         </footer>
-        <script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("form").forEach(form=>{form.addEventListener("submit",function(event){let isValid=form.checkValidity();form.querySelectorAll(".error-message").forEach(error=>error.remove());form.querySelectorAll("input:invalid, textarea:invalid").forEach(input=>{let errorMessage=document.createElement("span");errorMessage.classList.add("error-message");errorMessage.textContent=input.validationMessage;input.previousElementSibling.insertAdjacentElement("afterend",errorMessage)});if(!isValid){event.preventDefault();return}event.preventDefault();let formData=new FormData(form);let formURL="https://docs.google.com/forms/d/e/1FAIpQLScWEb9VvSM2An3zyAJddT-HNcnUm-zYeoqSW6ypCesbm3BapA/formResponse?";fetch(formURL,{method:"POST",mode:"no-cors",body:formData}).then(()=>{form.style.display="none";const message=document.createElement("p");message.classList.add("thanks");message.textContent="Message received.";message.style.position="relative";message.style.top="var(--gap)";form.parentElement.insertBefore(message,form.nextSibling)}).catch(error=>console.error("Error!",error))});form.querySelectorAll("input, textarea").forEach(input=>{input.addEventListener("input",function(){this.setCustomValidity('');this.checkValidity();this.parentNode.querySelector(".error-message")?.remove()})})});window.resetForms=function(){document.querySelectorAll("form").forEach((form)=>{form.reset();form.style.display="block";form.parentElement.querySelector(".thanks")?.remove();form.querySelectorAll(".error-message").forEach(error=>error.remove());form.querySelectorAll("input, textarea").forEach((input)=>{input.classList.remove("input-error");input.setCustomValidity('')})})};window.addEventListener("hashchange",function(){if(window.location.hash!=="#contact"){window.resetForms()}});window.addEventListener("pageshow",function(event){if(event.persisted){window.resetForms();document.activeElement?.blur()}});window.resetForms()});</script>
+        <script>document.addEventListener("DOMContentLoaded",()=>{const form=document.getElementById("contactForm");if(!form)return;form.addEventListener("submit",function(event){let isValid=form.checkValidity();form.querySelectorAll(".error-message").forEach((error)=>error.remove());form.querySelectorAll("input:invalid, textarea:invalid").forEach((input)=>{let errorMessage=document.createElement("span");errorMessage.classList.add("error-message");errorMessage.textContent=input.validationMessage;input.previousElementSibling.insertAdjacentElement("afterend",errorMessage)});if(!isValid){event.preventDefault();return}event.preventDefault();const formData=new FormData(form);const formURL="https://docs.google.com/forms/d/e/1FAIpQLScWEb9VvSM2An3zyAJddT-HNcnUm-zYeoqSW6ypCesbm3BapA/formResponse?";fetch(formURL,{method:"POST",mode:"no-cors",body:formData}).then(()=>{const formStatus=document.getElementById("formStatus");if(formStatus){formStatus.textContent="Message received."}setTimeout(()=>{form.style.display="none";const message=document.createElement("p");message.classList.add("thanks");message.textContent="Message received.";form.parentElement.insertBefore(message,form.nextSibling)},300)}).catch((error)=>{console.error("Error!",error)})});form.querySelectorAll("input, textarea").forEach((input)=>{input.addEventListener("input",function(){this.setCustomValidity("");this.checkValidity();this.parentNode.querySelector(".error-message")?.remove()})});window.resetForms=function(){const form=document.getElementById("contactForm");if(!form)return;form.reset();form.style.display="block";form.parentElement.querySelector(".thanks")?.remove();form.querySelectorAll(".error-message").forEach((error)=>error.remove());form.querySelectorAll("input, textarea").forEach((input)=>{input.classList.remove("input-error");input.setCustomValidity("")});const status=document.getElementById("formStatus");if(status)status.textContent=""};window.addEventListener("hashchange",()=>{if(window.location.hash!=="#contact"){window.resetForms()}});window.addEventListener("pageshow",(event)=>{if(event.persisted){window.resetForms();document.activeElement?.blur()}});window.resetForms()});</script>
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",

@@ -249,8 +249,7 @@ footer {
     padding-left: 2px;
 }
 
-.error-message, 
-.thanks {
+.error-message {
     display: inline;
     color: var(--accent-color);
 }
