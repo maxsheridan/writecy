@@ -6,14 +6,14 @@
         <meta name="color-scheme" content="light dark">
         <link rel="preload" as="font" href="/assets/type/Mono_45_Headline_Light.woff2" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="/assets/type/G2_Erika_Regular.woff2" type="font/woff2" crossorigin>
-        <link rel="stylesheet" href="/style.css" type="text/css">
+        <link rel="stylesheet" href="/style.css?v=2" type="text/css">
         <link rel="icon" sizes="32x32" href="/favicon.ico?v=2" type="image/x-icon" >
         <link rel="icon" sizes="any" href="/favicon.svg?v=2" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/assets/icons/apple_touch_icon.png?v=2" type="image/png">
         <link rel="manifest" as="fetch" href="/manifest.json" type="application/json">
         <link rel="canonical" href="https://writecy.com/contact">
         <title>Contact - Write CY</title>     
-        <meta name="description" content="Say hello.">
+        <meta name="description" content="Fill out the form to get in touch. We promise not to add you to any mailing lists.">
         <meta name="thumbnail" content="https://writecy.com/assets/graphics/share.webp">
         <meta property="og:site_name" content="Write CY">
         <meta property="og:title" content="Write CY">
@@ -23,16 +23,26 @@
         <meta property="og:image:type" content="image/webp">
         <meta property="og:image:width" content="720">
         <meta property="og:image:height" content="720">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Contact",
+                "description": "Fill out the form to get in touch. We promise not to add you to any mailing lists.",
+                "url": "https://writecy.com/contact"
+            }
+        </script>  
         <style>form{width:100%;margin-block-start:var(--big-gap);}label{font-family:var(--font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--primary-color)}input{width:100%;margin-block-start:.5rem;margin-block-end:var(--big-gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}textarea{min-width:100%;max-width:100%;min-height:100px;max-height:600px;margin-block-end:var(--gap);padding:1rem .5rem;border:1.5px solid var(--primary-color);border-radius:.25rem;font-family:var(--body-font);font-size:var(--label-font-size);line-height:var(--line-height);color:var(--dark-primary-color);background-color:var(--form-field-background-color)}button{border:1.5px solid var(--accent-color);border-radius:.25rem;padding:1rem 2rem;font-family:var(--font);font-size:var(--label-font-size);color:var(--background-color);background-color:var(--accent-color);cursor:pointer}.thanks{color:var(--accent-color)}@media(hover:hover) and (pointer:fine){button:hover{border:1.5px solid var(--primary-color);background-color:var(--primary-color)}}</style>
     </head>
     <body>
-        <header class="margins-off linkstyling-off">
+        <a href="#main-content" class="skip-link">Skip to content</a>
+        <header class="linkstyling-off">
             <a href="/" aria-label="Write CY home" class="title">
                 Write CY
             </a>
             <h2 id="nav-label" class="vh">Main Menu</h2>
             <nav aria-labelledby="nav-label">
-                <ul class="margins-off">
+                <ul>
                     <li>
                         <a href="/">News</a>
                     </li>
@@ -45,7 +55,7 @@
                 </ul>
             </nav>
         </header>
-        <main id="contact">
+        <main id="main-content" tab-index="-1">
             <div class="stuff">
                 <h1>
                     Hello
@@ -87,7 +97,8 @@
                 <p id="formStatus" class="vh" aria-live="assertive" role="alert"></p>
             </div>
         </main> 
-        <footer class="margins-off linkstyling-off">
+        <footer role="contentinfo" aria-label="Footer">
+            <h2 class="vh">Social links and Copyright</h2>
             <div class="socials">
                 <a href="https://soundcloud.com/user-178729486" aria-label="Soundcloud icon">
                     <svg class="social-doodads" viewBox="0 0 256 256"><path d="M24 120v48a8 8 0 0 1-16 0v-48a8 8 0 0 1 16 0m24-32a8 8 0 0 0-8 8v96a8 8 0 0 0 16 0V96a8 8 0 0 0-8-8m32-8a8 8 0 0 0-8 8v104a8 8 0 0 0 16 0V88a8 8 0 0 0-8-8m32-32a8 8 0 0 0-8 8v136a8 8 0 0 0 16 0V56a8 8 0 0 0-8-8m110.8 58.3A80 80 0 0 0 144 40a8 8 0 0 0 0 16 64 64 0 0 1 63.7 57.5 8 8 0 0 0 6.4 7A32 32 0 0 1 208 184h-64a8 8 0 0 0 0 16h64a48 48 0 0 0 14.8-93.7" fill="currentColor"/></svg>
@@ -97,20 +108,11 @@
                 </a>
             </div>
             <div class="copyright">
-                <p>
+                <span>
                     ©2015+WCY
-                </p>
+                </span>
             </div>
         </footer>
-        <script>document.addEventListener("DOMContentLoaded",()=>{const form=document.getElementById("contactForm");if(!form)return;form.addEventListener("submit",function(event){let isValid=form.checkValidity();form.querySelectorAll(".error-message").forEach((error)=>error.remove());form.querySelectorAll("input:invalid, textarea:invalid").forEach((input)=>{let errorMessage=document.createElement("span");errorMessage.classList.add("error-message");errorMessage.textContent=input.validationMessage;input.previousElementSibling.insertAdjacentElement("afterend",errorMessage)});if(!isValid){event.preventDefault();return}event.preventDefault();const formData=new FormData(form);const formURL="https://docs.google.com/forms/d/e/1FAIpQLScWEb9VvSM2An3zyAJddT-HNcnUm-zYeoqSW6ypCesbm3BapA/formResponse?";fetch(formURL,{method:"POST",mode:"no-cors",body:formData}).then(()=>{const formStatus=document.getElementById("formStatus");if(formStatus){formStatus.textContent="Message received."}setTimeout(()=>{form.style.display="none";const message=document.createElement("p");message.classList.add("thanks");message.textContent="Message received.";form.parentElement.insertBefore(message,form.nextSibling)},300)}).catch((error)=>{console.error("Error!",error)})});form.querySelectorAll("input, textarea").forEach((input)=>{input.addEventListener("input",function(){this.setCustomValidity("");this.checkValidity();this.parentNode.querySelector(".error-message")?.remove()})});window.resetForms=function(){const form=document.getElementById("contactForm");if(!form)return;form.reset();form.style.display="block";form.parentElement.querySelector(".thanks")?.remove();form.querySelectorAll(".error-message").forEach((error)=>error.remove());form.querySelectorAll("input, textarea").forEach((input)=>{input.classList.remove("input-error");input.setCustomValidity("")});const status=document.getElementById("formStatus");if(status)status.textContent=""};window.addEventListener("hashchange",()=>{if(window.location.hash!=="#contact"){window.resetForms()}});window.addEventListener("pageshow",(event)=>{if(event.persisted){window.resetForms();document.activeElement?.blur()}});window.resetForms()});</script>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "name": "Contact",
-                "description": "Say hello.",
-                "url": "https://writecy.com/contact"
-            }
-        </script>   
+        <script>document.addEventListener("DOMContentLoaded",()=>{const form=document.getElementById("contactForm");if(!form)return;form.addEventListener("submit",function(event){let isValid=form.checkValidity();form.querySelectorAll(".error-message").forEach((error)=>error.remove());form.querySelectorAll("input:invalid, textarea:invalid").forEach((input)=>{let errorMessage=document.createElement("span");errorMessage.classList.add("error-message");errorMessage.textContent=input.validationMessage;input.previousElementSibling.insertAdjacentElement("afterend",errorMessage)});if(!isValid){event.preventDefault();return}event.preventDefault();const formData=new FormData(form);const formURL="https://docs.google.com/forms/d/e/1FAIpQLScWEb9VvSM2An3zyAJddT-HNcnUm-zYeoqSW6ypCesbm3BapA/formResponse?";fetch(formURL,{method:"POST",mode:"no-cors",body:formData}).then(()=>{const formStatus=document.getElementById("formStatus");if(formStatus){formStatus.textContent="Message received."}setTimeout(()=>{form.style.display="none";const message=document.createElement("p");message.classList.add("thanks");message.textContent="Message received.";form.parentElement.insertBefore(message,form.nextSibling)},300)}).catch((error)=>{console.error("Error!",error)})});form.querySelectorAll("input, textarea").forEach((input)=>{input.addEventListener("input",function(){this.setCustomValidity("");this.checkValidity();this.parentNode.querySelector(".error-message")?.remove()})});window.resetForms=function(){const form=document.getElementById("contactForm");if(!form)return;form.reset();form.style.display="block";form.parentElement.querySelector(".thanks")?.remove();form.querySelectorAll(".error-message").forEach((error)=>error.remove());form.querySelectorAll("input, textarea").forEach((input)=>{input.classList.remove("input-error");input.setCustomValidity("")});const status=document.getElementById("formStatus");if(status)status.textContent=""};window.addEventListener("hashchange",()=>{if(window.location.hash!=="#contact"){window.resetForms()}});window.addEventListener("pageshow",(event)=>{if(event.persisted){window.resetForms();document.activeElement?.blur()}});window.resetForms()});</script> 
     </body>
 </html>

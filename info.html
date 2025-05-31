@@ -6,7 +6,7 @@
         <meta name="color-scheme" content="light dark">
         <link rel="preload" as="font" href="/assets/type/Mono_45_Headline_Light.woff2" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="/assets/type/G2_Erika_Regular.woff2" type="font/woff2" crossorigin>
-        <link rel="stylesheet" href="/style.css" type="text/css">
+        <link rel="stylesheet" href="/style.css?v=2" type="text/css">
         <link rel="icon" sizes="32x32" href="/favicon.ico?v=2" type="image/x-icon" >
         <link rel="icon" sizes="any" href="/favicon.svg?v=2" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/assets/icons/apple_touch_icon.png?v=2" type="image/png">
@@ -23,15 +23,25 @@
         <meta property="og:image:type" content="image/webp">
         <meta property="og:image:width" content="720">
         <meta property="og:image:height" content="720">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Info",
+                "description": "Write CY is a Nicosia-based platform for creative writing and community storytelling.",
+                "url": "https://writecy.com/info"
+            }
+        </script> 
     </head>
     <body>
-        <header class="margins-off linkstyling-off">
+        <a href="#main-content" class="skip-link">Skip to content</a>
+        <header class="linkstyling-off">
             <a href="/" aria-label="Write CY home" class="title">
                 Write CY
             </a>
             <h2 id="nav-label" class="vh">Main Menu</h2>
             <nav aria-labelledby="nav-label">
-                <ul class="margins-off">
+                <ul>
                     <li>
                         <a href="/">News</a>
                     </li>
@@ -44,7 +54,7 @@
                 </ul>
             </nav>
         </header>
-        <main id="info">
+        <main id="main-content" tab-index="-1">
             <div class="stuff">
                 <h1>
                     About
@@ -58,7 +68,8 @@
                 </p>
             </div>
         </main>
-        <footer class="margins-off linkstyling-off">
+        <footer role="contentinfo" aria-label="Footer">
+            <h2 class="vh">Social links and Copyright</h2>
             <div class="socials">
                 <a href="https://soundcloud.com/user-178729486" aria-label="Soundcloud icon">
                     <svg class="social-doodads" viewBox="0 0 256 256"><path d="M24 120v48a8 8 0 0 1-16 0v-48a8 8 0 0 1 16 0m24-32a8 8 0 0 0-8 8v96a8 8 0 0 0 16 0V96a8 8 0 0 0-8-8m32-8a8 8 0 0 0-8 8v104a8 8 0 0 0 16 0V88a8 8 0 0 0-8-8m32-32a8 8 0 0 0-8 8v136a8 8 0 0 0 16 0V56a8 8 0 0 0-8-8m110.8 58.3A80 80 0 0 0 144 40a8 8 0 0 0 0 16 64 64 0 0 1 63.7 57.5 8 8 0 0 0 6.4 7A32 32 0 0 1 208 184h-64a8 8 0 0 0 0 16h64a48 48 0 0 0 14.8-93.7" fill="currentColor"/></svg>
@@ -68,19 +79,10 @@
                 </a>
             </div>
             <div class="copyright">
-                <p>
+                <span>
                     ©2015+WCY
-                </p>
+                </span>
             </div>
-        </footer>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "name": "Info",
-                "description": "Write CY is a Nicosia-based platform for creative writing and community storytelling.",
-                "url": "https://writecy.com/info"
-            }
-        </script>    
+        </footer> 
     </body>
 </html>

@@ -6,7 +6,7 @@
         <meta name="color-scheme" content="light dark">
         <link rel="preload" as="font" href="/assets/type/Mono_45_Headline_Light.woff2" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="/assets/type/G2_Erika_Regular.woff2" type="font/woff2" crossorigin>
-        <link rel="stylesheet" href="/style.css" type="text/css">
+        <link rel="stylesheet" href="/style.css?v=2" type="text/css">
         <link rel="icon" sizes="32x32" href="/favicon.ico?v=2" type="image/x-icon" >
         <link rel="icon" sizes="any" href="/favicon.svg?v=2" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/assets/icons/apple_touch_icon.png?v=2" type="image/png">
@@ -23,16 +23,26 @@
         <meta property="og:image:type" content="image/webp">
         <meta property="og:image:width" content="720">
         <meta property="og:image:height" content="720">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Write CY",
+                "description": "Community creative writing.",
+                "url": "https://writecy.com"
+            }
+        </script>
         <style>.audio-player{max-width:100%;margin-block:var(--big-gap);-webkit-tap-highlight-color:#fff0;outline:none;touch-action:manipulation}.controls{display:flex;align-items:center}.play-pause{display:flex;align-items:center;justify-content:center;width:24px;height:24px;margin-right:.5rem;padding:0;border-radius:50%;background-color:var(--accent-color);cursor:pointer}.play-pause .icon{width:75%;height:75%}.play-pause.play .icon polygon{fill:var(--background-color)}.play-pause.pause .icon rect{fill:var(--background-color)}.progress{position:relative;flex:1;height:2px;background-color:lightgray;cursor:pointer}.progress-filled{width:0%;height:100%;background-color:var(--accent-color)}.progress input{position:absolute;top:-.45rem;width:100%;height:16px;margin:0;background:#fff0;-webkit-appearance:none;-moz-appearance:none;appearance:none}.progress input::-webkit-slider-thumb{width:10px;height:10px;margin:0;border:0;border-radius:50%;background-color:var(--accent-color);-webkit-appearance:none;appearance:none;cursor:pointer}.progress input::-moz-range-thumb{width:10px;height:10px;margin:0;border:0;border-radius:50%;background-color:var(--accent-color);-moz-appearance:none;appearance:none;cursor:pointer}</style>
     </head>
     <body>
-        <header class="margins-off linkstyling-off">
+        <a href="#main-content" class="skip-link">Skip to content</a>
+        <header class="linkstyling-off">
             <a href="/" aria-label="Write CY home" class="title">
                 Write CY
             </a>
             <h2 id="nav-label" class="vh">Main Menu</h2>
             <nav aria-labelledby="nav-label">
-                <ul class="margins-off">
+                <ul>
                     <li>
                         <a href="/" aria-current="page" class="active">News</a>
                     </li>
@@ -45,7 +55,7 @@
                 </ul>
             </nav>
         </header>
-        <main id="blog-page-one">
+        <main id="main-content" tab-index="-1">
             <div class="stuff">
                 <article>
                     <div class="some-words">
@@ -374,9 +384,9 @@
                 </div>
             </div>   
         </main> 
-        <footer role="contentinfo" aria-label="Footer" class="margins-off">
+        <footer role="contentinfo" aria-label="Footer">
             <h2 class="vh">Social links and Copyright</h2>
-            <div class="socials margins-off">
+            <div class="socials">
                 <a href="https://soundcloud.com/user-178729486" aria-label="Soundcloud icon">
                     <svg class="social-doodads" viewBox="0 0 256 256"><path d="M24 120v48a8 8 0 0 1-16 0v-48a8 8 0 0 1 16 0m24-32a8 8 0 0 0-8 8v96a8 8 0 0 0 16 0V96a8 8 0 0 0-8-8m32-8a8 8 0 0 0-8 8v104a8 8 0 0 0 16 0V88a8 8 0 0 0-8-8m32-32a8 8 0 0 0-8 8v136a8 8 0 0 0 16 0V56a8 8 0 0 0-8-8m110.8 58.3A80 80 0 0 0 144 40a8 8 0 0 0 0 16 64 64 0 0 1 63.7 57.5 8 8 0 0 0 6.4 7A32 32 0 0 1 208 184h-64a8 8 0 0 0 0 16h64a48 48 0 0 0 14.8-93.7" fill="currentColor"/></svg>
                 </a>
@@ -390,15 +400,6 @@
                 </span>
             </div>
         </footer>
-        <script>document.addEventListener("DOMContentLoaded",()=>{const resetAudioPlayers=()=>{document.querySelectorAll(".audio-player").forEach((e)=>{const audio=e.querySelector("audio");const playPause=e.querySelector(".play-pause");const progress=e.querySelector(".progress input");const progressFill=e.querySelector(".progress-filled");audio.currentTime=0;audio.pause();playPause.className="play-pause play";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><polygon points="10,6.9 10,23.1 24,15" fill="currentColor"></polygon></svg>`;progressFill.style.width="0%";progress.value=0})};resetAudioPlayers();document.querySelectorAll(".audio-player").forEach((e)=>{const audio=e.querySelector("audio");const playPause=e.querySelector(".play-pause");const progress=e.querySelector(".progress input");const progressFill=e.querySelector(".progress-filled");playPause.addEventListener("click",()=>{if(audio.paused){document.querySelectorAll("audio").forEach((a)=>a!==audio&&a.pause());audio.play()}else{audio.pause()}});audio.addEventListener("play",()=>{playPause.className="play-pause pause";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><rect x="10" y="8" width="3" height="14" fill="currentColor"></rect><rect x="17" y="8" width="3" height="14" fill="currentColor"></rect></svg>`});audio.addEventListener("pause",()=>{playPause.className="play-pause play";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><polygon points="10,6.9 10,23.1 24,15" fill="currentColor"></polygon></svg>`});audio.addEventListener("timeupdate",()=>{const percentage=(audio.currentTime/audio.duration)*100||0;progressFill.style.width=`${percentage}%`;progress.value=percentage});progress.addEventListener("input",()=>{audio.currentTime=(progress.value/100)*audio.duration})})});window.addEventListener("load",()=>{document.querySelectorAll(".audio-player audio").forEach((audio)=>{audio.currentTime=0;audio.pause()})});</script>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "name": "Write CY",
-                "description": "Community creative writing.",
-                "url": "https://writecy.com"
-            }
-        </script>   
+        <script>document.addEventListener("DOMContentLoaded",()=>{const resetAudioPlayers=()=>{document.querySelectorAll(".audio-player").forEach((e)=>{const audio=e.querySelector("audio");const playPause=e.querySelector(".play-pause");const progress=e.querySelector(".progress input");const progressFill=e.querySelector(".progress-filled");audio.currentTime=0;audio.pause();playPause.className="play-pause play";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><polygon points="10,6.9 10,23.1 24,15" fill="currentColor"></polygon></svg>`;progressFill.style.width="0%";progress.value=0})};resetAudioPlayers();document.querySelectorAll(".audio-player").forEach((e)=>{const audio=e.querySelector("audio");const playPause=e.querySelector(".play-pause");const progress=e.querySelector(".progress input");const progressFill=e.querySelector(".progress-filled");playPause.addEventListener("click",()=>{if(audio.paused){document.querySelectorAll("audio").forEach((a)=>a!==audio&&a.pause());audio.play()}else{audio.pause()}});audio.addEventListener("play",()=>{playPause.className="play-pause pause";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><rect x="10" y="8" width="3" height="14" fill="currentColor"></rect><rect x="17" y="8" width="3" height="14" fill="currentColor"></rect></svg>`});audio.addEventListener("pause",()=>{playPause.className="play-pause play";playPause.innerHTML=`<svg class="icon" viewBox="0 0 30 30"><polygon points="10,6.9 10,23.1 24,15" fill="currentColor"></polygon></svg>`});audio.addEventListener("timeupdate",()=>{const percentage=(audio.currentTime/audio.duration)*100||0;progressFill.style.width=`${percentage}%`;progress.value=percentage});progress.addEventListener("input",()=>{audio.currentTime=(progress.value/100)*audio.duration})})});window.addEventListener("load",()=>{document.querySelectorAll(".audio-player audio").forEach((audio)=>{audio.currentTime=0;audio.pause()})});</script>   
     </body>
 </html>
