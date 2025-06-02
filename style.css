@@ -18,9 +18,9 @@
     --big-gap: 2rem;
     --max-width:42rem;
     --body-font: 'G2 Erika', sans-serif, system-ui;
-    --body-font-size: clamp(1.225rem,3vw,1.35em);
+    --body-font-size: clamp(1.2rem,3.1vw,1.35rem);
     --heading-font: 'Mono 45 Headline', monospace;
-    --heading-font-size: clamp(1.9rem,4vw,2.25rem);
+    --heading-font-size: clamp(1.9rem,5vw,2.25rem);
     --primary-color: #111;
     --dark-primary-color: var(--primary-color);
     --accent-color: #AD0000;
