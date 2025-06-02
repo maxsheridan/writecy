@@ -123,7 +123,7 @@ main {
     margin: unset;
 }
 
-.stuff {
+.acme-content-wrapper {
     max-width:var(--max-width);
     margin: 0 auto;
     padding: clamp(8rem,12vw,10rem) 0;
