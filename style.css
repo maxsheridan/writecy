@@ -1,16 +1,16 @@
 @font-face {
-    font-family:'G2 Erika';
-    src:url(/assets/type/G2_Erika_Regular.woff2) format('woff2');
-    font-weight:400;
-    font-style:normal;
-    font-display:swap
+    font-family: 'G2 Erika';
+    src: url(/assets/type/G2_Erika_Regular.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
-@font-face {font-family:'Mono 45 Headline';
-    src:url(assets/type/Mono_45_Headline_Light.woff2) format('woff2');
-    font-weight:400;
-    font-style:normal;
-    font-display:swap
+@font-face {font-family: 'Mono 45 Headline';
+    src: url(assets/type/Mono_45_Headline_Light.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 :root {
