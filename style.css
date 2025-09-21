@@ -16,11 +16,11 @@
 :root {
     --gap: 1.25rem;
     --big-gap: 2rem;
-    --max-width:42rem;
+    --max-width: 42rem;
     --body-font: 'G2 Erika', sans-serif, system-ui;
-    --body-font-size: clamp(1.2rem,3.1vw,1.35rem);
+    --body-font-size: calc(1.05rem + .35vw);
     --heading-font: 'Mono 45 Headline', monospace;
-    --heading-font-size: clamp(1.9rem,5vw,2.25rem);
+    --heading-font-size: calc(1.75rem + .7vw);
     --primary-color: #111;
     --dark-primary-color: var(--primary-color);
     --accent-color: #AD0000;
@@ -81,13 +81,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    min-height: 100vh;
     min-height: 100dvh;
     padding: 0 1rem;
     font-family: var(--body-font);
     font-size: var(--body-font-size);
     font-weight: 400;
     font-style: normal;
-    line-height: 1.55;
+    line-height: 1.5;
     color: var(--primary-color);
     background-color: var(--background-color);
 }
@@ -103,15 +104,13 @@ header {
     z-index: 4;
     width: 100%;
     height: 4rem;
-    padding-right: clamp(1rem, 3vw, 1.5rem);
-    padding-left: clamp(1rem, 3vw, 1.5rem);
+    padding: 0 1rem;
     border-bottom: 2px solid var(--primary-color);
     background-color: var(--background-color);
 }
 
 nav ul {
     display: flex;
-    gap: 1rem;
     list-style: none;
 }
 
@@ -126,7 +125,7 @@ main {
 .acme-content-wrapper {
     max-width:var(--max-width);
     margin: 0 auto;
-    padding: clamp(8rem,12vw,10rem) 0;
+    padding: 9rem 0;
 }
 
 article:not(:first-child) {
@@ -162,6 +161,17 @@ a {
     color: var(--primary-color);
 }
 
+a:hover {
+    opacity: .6;
+}
+header a:hover, .socials a:hover {
+    color: var(--accent-color);
+    opacity: 1;
+}
+.social-doodads:hover {
+    fill: var(--accent-color);
+}
+
 @media (hover:hover) and (pointer:fine) {
     a:hover {
         opacity: .6;
@@ -193,6 +203,10 @@ hr {
     background: var(--accent-color);
 }
 
+.spacer {
+    width: .75rem;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -218,21 +232,19 @@ footer {
     bottom: 0;
     width: 100%;
     height: 4rem;
-    padding-right: clamp(1rem, 3vw, 1.5rem);
-    padding-left: clamp(1rem, 3vw, 1.5rem);
+    padding: 0 1rem;
     border-top: 2px solid var(--primary-color);
     background-color: var(--background-color);
 }
 
 .socials {
     display: flex;
-    gap: .75rem;
 }
 
 .social-doodads {
     display: flex;
     width: auto;
-    height: clamp(24px,4vw,26px);
+    height: calc(var(--body-font-size) * 1.25);
     vertical-align: baseline;
     fill: var(--primary-color);
 }
@@ -244,12 +256,12 @@ footer {
 
 .coda-thingy {
     width: auto;
-    height: clamp(36px, 5vw, 38px);
+    height: calc(var(--body-font-size) * 2);
 }
 
 .arrow-up-rgt {
     width: auto;
-    height: clamp(11px,2vw,12px);
+    height: calc(var(--body-font-size) * .6);
     padding-left: 2px;
 }
 
