@@ -161,17 +161,6 @@ a {
     color: var(--primary-color);
 }
 
-a:hover {
-    opacity: .6;
-}
-header a:hover, .socials a:hover {
-    color: var(--accent-color);
-    opacity: 1;
-}
-.social-doodads:hover {
-    fill: var(--accent-color);
-}
-
 @media (hover:hover) and (pointer:fine) {
     a:hover {
         opacity: .6;
