@@ -100,20 +100,20 @@
         </main> 
         <footer aria-label="footer">
             <div class="socials">
-                <a href="https://soundcloud.com/user-178729486" aria-label="Soundcloud icon">
-                    <svg class="social-doodads" viewBox="0 0 256 256"><path d="M24 120v48a8 8 0 0 1-16 0v-48a8 8 0 0 1 16 0m24-32a8 8 0 0 0-8 8v96a8 8 0 0 0 16 0V96a8 8 0 0 0-8-8m32-8a8 8 0 0 0-8 8v104a8 8 0 0 0 16 0V88a8 8 0 0 0-8-8m32-32a8 8 0 0 0-8 8v136a8 8 0 0 0 16 0V56a8 8 0 0 0-8-8m110.8 58.3A80 80 0 0 0 144 40a8 8 0 0 0 0 16 64 64 0 0 1 63.7 57.5 8 8 0 0 0 6.4 7A32 32 0 0 1 208 184h-64a8 8 0 0 0 0 16h64a48 48 0 0 0 14.8-93.7" fill="currentColor"/></svg>
+                <a href="https://soundcloud.com/user-178729486" aria-label="Link to Soundcloud">
+                    <svg class="social-doodads" viewBox="0 0 256 256"><path fill="currentColor" d="M24 120v48a8 8 0 0 1-16 0v-48a8 8 0 0 1 16 0m24-32a8 8 0 0 0-8 8v96a8 8 0 0 0 16 0V96a8 8 0 0 0-8-8m32-8a8 8 0 0 0-8 8v104a8 8 0 0 0 16 0V88a8 8 0 0 0-8-8m32-32a8 8 0 0 0-8 8v136a8 8 0 0 0 16 0V56a8 8 0 0 0-8-8m110.8 58.3A80 80 0 0 0 144 40a8 8 0 0 0 0 16 64 64 0 0 1 63.7 57.5 8 8 0 0 0 6.4 7A32 32 0 0 1 208 184h-64a8 8 0 0 0 0 16h64a48 48 0 0 0 14.8-93.7"/></svg>
                 </a>
                 <span class="spacer" aria-hidden="true"></span>
-                <a href="https://www.facebook.com/writecyprus/" aria-label="Facebook icon">
-                    <svg class="social-doodads" viewBox="0 0 256 256"><path d="M128 24a104 104 0 1 0 104 104A104 104 0 0 0 128 24m8 191.6V152h24a8 8 0 0 0 0-16h-24v-24a16 16 0 0 1 16-16h16a8 8 0 0 0 0-16h-16a32 32 0 0 0-32 32v24H96a8 8 0 0 0 0 16h24v63.6a88 88 0 1 1 16 0" fill="currentColor"/></svg>
+                <a href="https://www.facebook.com/writecyprus/" aria-label="Link to Facebook">
+                    <svg class="social-doodads" viewBox="0 0 256 256"><path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104 104 0 0 0 128 24m8 191.6V152h24a8 8 0 0 0 0-16h-24v-24a16 16 0 0 1 16-16h16a8 8 0 0 0 0-16h-16a32 32 0 0 0-32 32v24H96a8 8 0 0 0 0 16h24v63.6a88 88 0 1 1 16 0"/></svg>
                 </a>
-            </div>
+            </div> 
             <div class="copyright">
                 <span>
                     ©2015+WCY
                 </span>
             </div>
-        </footer>
+        </footer> 
         <script>document.addEventListener("DOMContentLoaded",()=>{const form=document.getElementById("contactForm");if(!form)return;form.addEventListener("submit",function(event){let isValid=form.checkValidity();form.querySelectorAll(".error-message").forEach((error)=>error.remove());form.querySelectorAll("input:invalid, textarea:invalid").forEach((input)=>{let errorMessage=document.createElement("span");errorMessage.classList.add("error-message");errorMessage.textContent=input.validationMessage;input.previousElementSibling.insertAdjacentElement("afterend",errorMessage)});if(!isValid){event.preventDefault();return}event.preventDefault();const formData=new FormData(form);const formURL="https://docs.google.com/forms/d/e/1FAIpQLScWEb9VvSM2An3zyAJddT-HNcnUm-zYeoqSW6ypCesbm3BapA/formResponse?";fetch(formURL,{method:"POST",mode:"no-cors",body:formData}).then(()=>{const formStatus=document.getElementById("formStatus");if(formStatus){formStatus.textContent="Message received."}setTimeout(()=>{form.style.display="none";const message=document.createElement("p");message.classList.add("thanks");message.textContent="Message received.";form.parentElement.insertBefore(message,form.nextSibling)},300)}).catch((error)=>{console.error("Error!",error)})});form.querySelectorAll("input, textarea").forEach((input)=>{input.addEventListener("input",function(){this.setCustomValidity("");this.checkValidity();this.parentNode.querySelector(".error-message")?.remove()})});window.resetForms=function(){const form=document.getElementById("contactForm");if(!form)return;form.reset();form.style.display="block";form.parentElement.querySelector(".thanks")?.remove();form.querySelectorAll(".error-message").forEach((error)=>error.remove());form.querySelectorAll("input, textarea").forEach((input)=>{input.classList.remove("input-error");input.setCustomValidity("")});const status=document.getElementById("formStatus");if(status)status.textContent=""};window.addEventListener("hashchange",()=>{if(window.location.hash!=="#contact"){window.resetForms()}});window.addEventListener("pageshow",(event)=>{if(event.persisted){window.resetForms();document.activeElement?.blur()}});window.resetForms()});</script> 
     </body>
 </html>
