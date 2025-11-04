@@ -16,7 +16,7 @@
 :root {
     --gap: 1.25rem;
     --big-gap: 2rem;
-    --max-width: 54ch;
+    --max-width: 50ch;
     --body: 'G2 Erika', sans-serif, system-ui;
     --paragraph: calc(1.2rem + .35vw);
     --heading: 'Mono 45 Headline', monospace;
@@ -139,16 +139,10 @@ article:not(:last-of-type)::after {
     content: ""
 }
 
-.a-picture {
-    display: flex;
-    justify-content: center;
-}
-
-.a-picture img {
+img {
     width: 100%;
-    height: auto;
-    margin-block-end: var(--big-gap);
-    border-radius: .5rem .5rem .5rem .5rem;
+    margin-block-end: var(--gap);
+    border-radius: 1rem;
 }
 
 a {
