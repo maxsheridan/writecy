@@ -141,6 +141,7 @@ article:not(:last-of-type)::after {
 
 img {
     width: 100%;
+    height: auto;
     margin-block-end: var(--gap);
     border-radius: 1rem;
 }
