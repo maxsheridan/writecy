@@ -154,18 +154,25 @@ a {
     text-decoration-skip: all;
     text-decoration-color: grey;
     color: var(--primary);
+    transition: color .2s ease;
+}
+
+a {
+    display: inline;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 1.5px;
+    text-decoration-skip: all;
+    text-decoration-color: grey;
+    color: var(--primary);
+    transition: color .3s ease;
 }
 
 @media (hover:hover) and (pointer:fine) {
-    a:hover {
-        opacity: .6;
-    }
-    header a:hover, .socials a:hover {
+    a:hover,
+    a:focus,
+    a:active {
         color: var(--accent);
-        opacity: 1;
-    }
-    .social-doodads:hover {
-        fill: var(--accent);
     }
 }
 
