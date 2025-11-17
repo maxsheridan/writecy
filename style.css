@@ -20,7 +20,7 @@
     --body: 'G2 Erika', sans-serif, system-ui;
     --paragraph: calc(1.22rem + .35vw);
     --heading: 'Mono 45 Headline', monospace;
-    --heading-1: calc(1.75rem + .7vw);
+    --heading-1: calc(1.85rem + .7vw);
     --primary: #111;
     --dark-primary: var(--primary);
     --accent: #AD0000;
