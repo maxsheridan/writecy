@@ -223,8 +223,7 @@ footer {
 .social-doodads {
     display: flex;
     width: auto;
-    height: calc(var(--paragraph) * 1.25);
-    vertical-align: baseline;
+    height: 1.15em;
     fill: var(--primary);
 }
 
@@ -239,9 +238,8 @@ footer {
 }
 
 .arrow-up-rgt {
-    width: auto;
-    height: calc(var(--paragraph) * .6);
-    padding-left: 2px;
+    width: .65em;
+    height: auto;
 }
 
 .thin-space {
