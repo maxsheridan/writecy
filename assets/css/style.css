@@ -14,8 +14,11 @@
 }
 
 :root {
-    --gap: 1.25rem;
-    --big-gap: 2rem;
+    --ratio: 1.6;
+    --space--1: calc(var(--space-0) / var(--ratio));
+    --space-0: 1.25rem;
+    --space-1: calc(var(--space-0) * var(--ratio));
+    --space-2: calc(var(--space-1) * var(--ratio));
     --max-width: 50ch;
     --body: 'G2 Erika', sans-serif, system-ui;
     --paragraph: calc(1.22rem + .35vw);
@@ -48,20 +51,11 @@
     overscroll-behavior: none;
 }
 
-main * + * {
-    margin-block-start: var(--gap);
-}
-
-.margins-off * {
-    margin-block-start: 0;
-}
-
-.center {
-    text-align: center;
-}
-
 html {
     font-size: 16px;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: #fff0;
 }
 
 html:focus-within {
@@ -75,7 +69,7 @@ body {
     align-content: center;
     min-height: 100vh;
     min-height: 100dvh;
-    padding: 0 2rem;
+    padding: 0 var(--space-0);
     font-family: var(--body);
     font-size: var(--paragraph);
     font-weight: 400;
@@ -96,7 +90,7 @@ header {
     z-index: 4;
     width: 100%;
     height: 4rem;
-    padding: 0 2rem;
+    padding: 0 var(--space-0);
     border-bottom: 2px solid var(--primary);
     background-color: var(--background);
 }
@@ -110,23 +104,27 @@ nav a.active {
     color: var(--accent);
 }
 
-main {
-    margin: unset;
-}
-
 .acme-content-wrapper {
     max-width:var(--max-width);
     margin: 0 auto;
     padding: 9rem 0;
 }
+/* Adds extra margin to top of sibling articles to offset white space under date */
+main * + * {
+    margin-block-start: var(--space-0);
+}
+
+.margins-off * {
+    margin-block-start: 0;
+}
 
 article:not(:first-child) {
-    padding: 4rem 0 0;
+    padding: 6rem 0 0;
 }
 
 article:not(:last-of-type)::after {
     display: block;
-    height: 4rem;
+    height: 6rem;
     border-bottom: 2px solid var(--primary);
     content: ""
 }
@@ -134,11 +132,12 @@ article:not(:last-of-type)::after {
 img {
     width: 100%;
     height: auto;
-    margin-block-end: var(--gap);
+    margin-block-end: var(--space-0);
     border-radius: 1rem;
 }
 
-h1,h2 {
+h1,
+h2 {
     font-family: var(--heading);
     font-size: var(--heading-1);
     font-weight: 400;
@@ -180,10 +179,22 @@ input:focus-visible {
 hr {
     height: 1px;
     background: var(--accent);
+    margin-block-start: var(--space-1);
+    margin-block-end: var(--space-1);
+}
+
+.center {
+    text-align: center;
 }
 
 .space {
-    width: .75rem;
+    width: var(--space--1);
+}
+
+.thin-space {
+    display: inline-block;
+    width: 2px;
+    
 }
 
 .pagination {
@@ -191,8 +202,7 @@ hr {
     justify-content: center;
     width: 100%;
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding-bottom: 9rem;
+    margin: 6rem auto;
     display: none; /*not active*/
 }
 
@@ -211,7 +221,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 4rem;
-    padding: 0 2rem;
+    padding: 0 var(--space-0);
     border-top: 2px solid var(--primary);
     background-color: var(--background);
 }
@@ -234,18 +244,12 @@ footer {
 
 .coda-thingy {
     width: auto;
-    height: calc(var(--paragraph) * 2);
+    height: 1.7em;
 }
 
 .arrow-up-rgt {
     width: .65em;
     height: auto;
-}
-
-.thin-space {
-    display: inline-block;
-    width: 2px;
-    
 }
 
 .error-message {
