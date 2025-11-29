@@ -21,7 +21,7 @@
     --space-2: calc(var(--space-1) * var(--ratio));
     --max-width: 50ch;
     --body: 'G2 Erika', sans-serif, system-ui;
-    --paragraph: calc(1.22rem + .35vw);
+    --paragraph: calc(1.25rem + .35vw);
     --heading: 'Mono 45 Headline', monospace;
     --heading-1: calc(1.85rem + .7vw);
     --primary: #111;
