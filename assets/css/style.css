@@ -14,9 +14,9 @@
 }
 
 :root {
-    --ratio: 1.6;
+    --ratio: 1.5;
     --space--1: calc(var(--space-0) / var(--ratio));
-    --space-0: 1.25rem;
+    --space-0: calc(1.25rem + .35vw);
     --space-1: calc(var(--space-0) * var(--ratio));
     --space-2: calc(var(--space-1) * var(--ratio));
     --max-width: 50ch;
@@ -95,6 +95,11 @@ header {
     background-color: var(--background);
 }
 
+.gap--1 {
+    display: inline-block;
+    width: var(--space--1);
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -109,13 +114,10 @@ nav a.active {
     margin: 0 auto;
     padding: 9rem 0;
 }
-/* Adds extra margin to top of sibling articles to offset white space under date */
-main * + * {
-    margin-block-start: var(--space-0);
-}
 
-.margins-off * {
-    margin-block-start: 0;
+article > * + *,
+h1 + p {
+    margin-block-start: var(--space-0);
 }
 
 article:not(:first-child) {
@@ -144,6 +146,10 @@ h2 {
     font-style: normal;
     line-height: 1.1;
     word-spacing: -.25rem;
+}
+
+.date {
+    line-height: 1;
 }
 
 a {
@@ -187,14 +193,9 @@ hr {
     text-align: center;
 }
 
-.space {
-    width: var(--space--1);
-}
-
 .thin-space {
     display: inline-block;
-    width: 2px;
-    
+    width: .25rem;
 }
 
 .pagination {
@@ -278,15 +279,15 @@ footer {
 }   
 
 .vh {
-    position:absolute;
-    overflow:hidden;
-    width:1px;
-    height:1px;
-    clip-path:inset(50%);
-    white-space:nowrap;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     body {
         justify-content: flex-start;
     }
