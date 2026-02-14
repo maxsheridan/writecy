@@ -182,6 +182,10 @@ input:focus-visible {
     border-radius: .25rem;
 }
 
+[tabindex="-1"]:focus {
+    outline: none;
+}
+
 hr {
     height: 1px;
     margin-block-start: var(--space-1);
