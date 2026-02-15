@@ -117,12 +117,12 @@ main {
 }
 
 article > * + *,
-.utility > * + *,
-h1 + p {
+h1 + p,
+p + p  {
     margin-block-start: var(--space-0);
 }
 
-article:not(:first-child) {
+article:not(:first-of-type) {
     padding: 6rem 0 0;
 }
 
@@ -302,7 +302,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    main:not(.utility) {
+    main.start {
         justify-content: flex-start;
     }
 }
