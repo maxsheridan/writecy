@@ -200,6 +200,10 @@ hr {
     text-align: center;
 }
 
+.left {
+    align-self: flex-start;
+}
+
 .with-gap {
     gap: var(--space--1);
 }
