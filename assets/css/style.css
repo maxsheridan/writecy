@@ -95,11 +95,6 @@ header {
     background-color: var(--background);
 }
 
-.gap--1 {
-    display: inline-block;
-    width: var(--space--1);
-}
-
 nav ul {
     display: flex;
     list-style: none;
@@ -197,9 +192,16 @@ hr {
     text-align: center;
 }
 
-.thin-space {
-    display: inline-block;
-    width: .25rem;
+.with-gap {
+    gap: var(--space--1);
+}
+
+.space {
+    padding: 0 .15rem;
+}
+
+.emphasis {
+    color: var(--accent);
 }
 
 .pagination {
