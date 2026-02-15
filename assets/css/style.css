@@ -294,7 +294,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    body {
+    body:not(.utility) {
         justify-content: flex-start;
     }
 }
